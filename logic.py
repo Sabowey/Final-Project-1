@@ -60,6 +60,7 @@ class Logic(QMainWindow, Ui_Final_Project_1):
                 writer.writerow(self.final_list)
                 self.label_check.setText(f'{name}, you have successfully voted!')
                 self.label_check.adjustSize()
+                self.clear_votes()
             except ValueError:
                 self.label_check.setText(f'{i_d} is in use')
                 self.label_check.setStyleSheet('color: red')
